@@ -123,6 +123,12 @@ header .container {
   top: 30px;
   overflow: hidden;
   height: 55px;
+  transition: all 0.3s;
+  z-index: 10000;
+}
+#lnb:hover {
+  height: 180px;
+  border-bottom: 1px solid #cccccc;
 }
 .main {
   float: left;
@@ -162,4 +168,16 @@ header .container {
   padding: 3px 15px;
   border-bottom: 1px solid #cccccc;
   background-color: #fefefe;
+}
+
+footer {
+  margin-top: 60px;
+  background-color: #0066cc;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+footer a {
+  color: white;
 }
