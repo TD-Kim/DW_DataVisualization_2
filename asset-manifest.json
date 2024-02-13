@@ -1,26 +1,20 @@
 {
   "files": {
-    "main.css": "/DW_DataVisualization_2/static/css/main.b7a8abb9.css",
-    "main.js": "/DW_DataVisualization_2/static/js/main.0d7286de.js",
-    "static/media/logo.png": "/DW_DataVisualization_2/static/media/logo.bd05682dee8c7239c56c.png",
-    "static/media/dice-blue-6.svg": "/DW_DataVisualization_2/static/media/dice-blue-6.befa9f1bc2edfec0b51b3f9c52446e18.svg",
-    "static/media/dice-red-6.svg": "/DW_DataVisualization_2/static/media/dice-red-6.8622ba613c3d9aeb667f74bf90e60e31.svg",
-    "static/media/dice-blue-5.svg": "/DW_DataVisualization_2/static/media/dice-blue-5.c6f0695c04840bdeb0781826b80e4c7f.svg",
-    "static/media/dice-red-5.svg": "/DW_DataVisualization_2/static/media/dice-red-5.a674e6f20a64abe2f19bc9d082d56c8e.svg",
-    "static/media/dice-blue-4.svg": "/DW_DataVisualization_2/static/media/dice-blue-4.3868e428f9f7b2b0e58129afeed0f012.svg",
-    "static/media/dice-red-4.svg": "/DW_DataVisualization_2/static/media/dice-red-4.a61797f4a33744f265367ec21f8751cd.svg",
+    "main.css": "/DW_DataVisualization_2/static/css/main.83523d55.css",
+    "main.js": "/DW_DataVisualization_2/static/js/main.2c8b5668.js",
+    "static/media/ic-reset.svg": "/DW_DataVisualization_2/static/media/ic-reset.d5c059f2c845d190ac48bb46d0b9913c.svg",
+    "static/media/scissor.svg": "/DW_DataVisualization_2/static/media/scissor.4163805480eb41496f929189d4a8ab6e.svg",
+    "static/media/rock.svg": "/DW_DataVisualization_2/static/media/rock.90deae127d6ef560fa1ae1c3e0fba182.svg",
+    "static/media/yellow-win.svg": "/DW_DataVisualization_2/static/media/yellow-win.415a607716fa6e1dfb30.svg",
+    "static/media/paper.svg": "/DW_DataVisualization_2/static/media/paper.54096e0955ff6ac91d218c8fc3a18aef.svg",
+    "static/media/yellow.svg": "/DW_DataVisualization_2/static/media/yellow.e43596b0d25261a84736.svg",
+    "static/media/purple.svg": "/DW_DataVisualization_2/static/media/purple.a5c05033ac684ed16d12.svg",
     "index.html": "/DW_DataVisualization_2/index.html",
-    "static/media/dice-blue-3.svg": "/DW_DataVisualization_2/static/media/dice-blue-3.5e73657ce44580772a2e0ffc7b06a2d7.svg",
-    "static/media/dice-red-3.svg": "/DW_DataVisualization_2/static/media/dice-red-3.04def0203c2d114d3a51d1119e086ed3.svg",
-    "static/media/dice-blue-2.svg": "/DW_DataVisualization_2/static/media/dice-blue-2.a925314253a231128f4401605c8c2789.svg",
-    "static/media/dice-red-2.svg": "/DW_DataVisualization_2/static/media/dice-red-2.3f46b921a70cbdaba45fd85e96796db1.svg",
-    "static/media/dice-blue-1.svg": "/DW_DataVisualization_2/static/media/dice-blue-1.acc616331b1b53d81854194eb2ed177e.svg",
-    "static/media/dice-red-1.svg": "/DW_DataVisualization_2/static/media/dice-red-1.3e1f8e72c921bd25fea32af40740a708.svg",
-    "main.b7a8abb9.css.map": "/DW_DataVisualization_2/static/css/main.b7a8abb9.css.map",
-    "main.0d7286de.js.map": "/DW_DataVisualization_2/static/js/main.0d7286de.js.map"
+    "main.83523d55.css.map": "/DW_DataVisualization_2/static/css/main.83523d55.css.map",
+    "main.2c8b5668.js.map": "/DW_DataVisualization_2/static/js/main.2c8b5668.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7a8abb9.css",
-    "static/js/main.0d7286de.js"
+    "static/css/main.83523d55.css",
+    "static/js/main.2c8b5668.js"
   ]
 }
