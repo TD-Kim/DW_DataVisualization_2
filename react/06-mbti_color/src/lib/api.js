@@ -14,3 +14,7 @@ export function getMockItems(lastItemNum) {
 
   return { data: mock.slice(lastItemNum, nextItemNum), nextItemNum };
 }
+
+export function getMockItemsByFilter(filter) {
+  return { data: mock.filter(({ mbti }) => mbti == filter) };
+}

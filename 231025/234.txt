@@ -1,0 +1,28 @@
+.homeBtn {
+  color: #1c1b1f;
+  position: relative;
+  height: 80px;
+  background-image: url("../../assets/button\ round_1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.homeBtn:hover {
+  background-image: url("../../assets/button\ round_hover.svg");
+}
+
+.homeBtnText {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+<Link to="/" style={{ backgroundColor: "inherit", margin: "0" }}>
+            <div className={styles.homeBtn}>
+              <span className={styles.homeBtnText}>Go Home !</span>
+            </div>
+          </Link>
