@@ -437,10 +437,7 @@
               }, 5);
             } else if (!idPattern.test(checkId) == true) {
               notOkId.classList.remove("hidden");
-              if (
-                // 사용불가능한이 떠있을때 사용가능과 중복아이디가 안뜨게
-                notOkId.classList.contains("hidden") == false
-              ) {
+              if (notOkId.classList.contains("hidden") == false) {
                 noNo.classList.add("hidden");
                 okId.classList.add("hidden");
                 notOkId.classList.remove("hidden");
@@ -448,22 +445,18 @@
             } else if (checkId == chId["memberId"]) {
               noNo.classList.remove("hidden");
               if (noNo.classList.contains("hidden") == false) {
-                console.log("3");
                 okId.classList.add("hidden");
                 notOkId.classList.add("hidden");
                 noNo.classList.remove("hidden");
               }
             } else if (!idPattern.test(checkId) == false && isExist == 0) {
               okId.classList.remove("hidden");
-              console.log("그만");
               if (okId.classList.contains("hidden") == false) {
                 notOkId.classList.add("hidden");
                 noNo.classList.add("hidden");
               }
             }
           });
-          // console.log(idPattern.test(checkId));
-          // console.log(checkId != chId["memberId"]);
         });
       });
     }

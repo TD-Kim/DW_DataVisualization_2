@@ -29,7 +29,6 @@ let sec;
 
 // 정규식
 
-const phoneNumberPattern = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/g;
 const passwordPattern = /^[A-Za-z0-9]{4,12}$/g;
 
 const idAjax = document.querySelector("#id_ajax");
@@ -74,17 +73,14 @@ selected.addEventListener("change", function (e) {
   }
 });
 
-// 휴대폰 자동 하이픈
+const phoneNumberPattern = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/g;
 const autoHyphen = (target) => {
   target.value = target.value
     .replace(/[^0-9]/g, "")
     .replace(/(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g, "$1-$2-$3");
 };
-
-// 휴대폰 정규 표현식 검사 후 타이머 시작
 function takeTarget() {
   const phoneNum = document.querySelector("#phoneNumber").value;
-  // console.log(!phoneNumberPattern.test(phoneNum));
   if (phoneNumberPattern.test(phoneNum) == true) {
     alert("인증번호가 발송되었습니다.");
     timeId = setInterval(function () {
@@ -101,9 +97,6 @@ function takeTarget() {
     alert("연락처를 입력해주세요.");
   }
 }
-
-// 인증완료 버튼
-
 completeBtn.addEventListener("click", () => {
   if (numberInput.value == "") {
     alert("인증번호를 입력해주세요.");

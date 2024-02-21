@@ -1,10 +1,9 @@
-// 기본정보 관련 변수 선언
 const idKey = "userId";
 const memberId = document.querySelector("#id");
 const password = document.querySelector("#password");
 const remCheck = document.querySelector("#remember-check");
 const loginInfo = localStorage.getItem(idKey);
-// 로그인
+
 function loginCheck() {
   if (memberId.value == "") {
     alert("아이디를 입력해주세요.");
@@ -25,7 +24,7 @@ function loginCheck() {
     }, 5);
   }
 }
-// 아이디저장
+
 if (loginInfo != null) {
   memberId.value = loginInfo;
   console.log("아이디");
