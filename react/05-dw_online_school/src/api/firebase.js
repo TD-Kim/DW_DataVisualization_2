@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   collection,
@@ -17,14 +17,14 @@ import {
   where,
   arrayUnion,
   arrayRemove,
-} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
+} from "firebase/firestore";
 import {
   getStorage,
   ref,
   uploadBytes,
   getDownloadURL,
   deleteObject,
-} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js";
+} from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDysKNGaSgFliRlmIL9e-cP1YbakXZCHQs",

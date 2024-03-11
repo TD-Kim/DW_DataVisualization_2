@@ -10,6 +10,9 @@ function getLinkStyle({ isActive }) {
 }
 
 function Nav() {
+  const onClick = () => {
+    window.open("/courses", "_blank");
+  };
   return (
     <div className={styles.nav}>
       <Container className={styles.container}>
@@ -27,6 +30,11 @@ function Nav() {
           <li>
             <NavLink to="/questions" style={getLinkStyle}>
               커뮤니티
+            </NavLink>
+          </li>
+          <li>
+            <NavLink style={getLinkStyle} onClick={onClick}>
+              구글로이동~
             </NavLink>
           </li>
           <li>
