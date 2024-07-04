@@ -24,12 +24,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAE0iMM0BDXffQVE5e08kP_6J_8vw35NUw",
-  authDomain: "project0304-6bf26.firebaseapp.com",
-  projectId: "project0304-6bf26",
-  storageBucket: "project0304-6bf26.appspot.com",
-  messagingSenderId: "894657407290",
-  appId: "1:894657407290:web:ad60890788295246460803",
+  apiKey: "AIzaSyAdHy-PY5GiXz7B73eiyeL8FT0udOmhBkM",
+  authDomain: "moviepedia-c1462.firebaseapp.com",
+  projectId: "moviepedia-c1462",
+  storageBucket: "moviepedia-c1462.appspot.com",
+  messagingSenderId: "452125101812",
+  appId: "1:452125101812:web:40b9aedb70d1e7e97e98a1"
 };
 
 // Initialize Firebase

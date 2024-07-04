@@ -35,7 +35,7 @@
     img {
       width: 50%;
       height: 50%;
-      object-fit: cover;
+      /* object-fit: cover; */
     }
     img.on {
       filter: opacity(0.5) drop-shadow(0 0 0 red) saturate(1000%) blur(3px);
@@ -55,9 +55,9 @@
     </div>
   </body>
   <script>
-    const imgTag = document.querySelector("img");
-    const divTag = document.querySelector("#imgWrapper");
-    imgTag.addEventListener("click", function () {
+    const imgTag = document.querySelector('img');
+    const divTag = document.querySelector('#imgWrapper');
+    imgTag.addEventListener('click', function () {
       //   const currentClass = imgTag.classList[0];
       //   if (currentClass == "off") {
       //     imgTag.classList.remove("off");
@@ -71,8 +71,8 @@
       //     divTag.classList.add("off");
       //   }
 
-      imgTag.classList.toggle("on");
-      divTag.classList.toggle("on");
+      imgTag.classList.toggle('on');
+      divTag.classList.toggle('on');
     });
   </script>
 </html>

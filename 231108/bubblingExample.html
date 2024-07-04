@@ -31,10 +31,11 @@
     //   // console.log(pTag);
     // });
 
-    $("div").on("click", "p", function (e) {
+    $('div').on('click', 'p', function (e) {
       const pTag = e.target;
+      console.log(pTag);
       console.log(this); // p태그
-      $(this).parent("div").append($(pTag).clone().css("color", "red"));
+      $(this).parent('div').append($(pTag).clone().css('color', 'red'));
     });
   </script>
 </html>

@@ -54,7 +54,7 @@
     <button id="updateBtn">회원정보수정</button>
   </body>
   <script type="module">
-    import * as firebase from "../resources/js/firebase.js";
+    import * as firebase from '../resources/js/firebase.js';
     const {
       db,
       getDocs,
@@ -70,14 +70,14 @@
       updateDatas,
     } = firebase;
 
-    const memberTable = document.querySelector("table");
+    const memberTable = document.querySelector('table');
     async function getMembers() {
-      const snapshot = await getDatas("member");
+      const snapshot = await getDatas('member');
       snapshot.forEach((doc) => {
         const { memberName, memberAge, memberGender, memberTel, memberId } =
           doc.data();
         memberTable.insertAdjacentHTML(
-          "beforeend",
+          'beforeend',
           `
             <tr>
                 <td>${memberName}</td>
@@ -93,55 +93,63 @@
     }
 
     getMembers().then(function () {
-      const trs = document.querySelectorAll("tr");
+      const trs = document.querySelectorAll('tr');
       trs.forEach((el) => {
-        el.addEventListener("click", function (e) {
-          if (e.target.tagName != "TH") {
-            el.classList.toggle("selected");
+        el.addEventListener('click', function (e) {
+          if (e.target.tagName != 'TH') {
+            el.classList.toggle('selected');
           }
         });
       });
     });
 
-    const deleteBtn = document.querySelector("#deleteBtn");
-    deleteBtn.addEventListener("click", function () {
-      const selectedTrs = memberTable.querySelectorAll("[class=selected]");
+    const deleteBtn = document.querySelector('#deleteBtn');
+    deleteBtn.addEventListener('click', function () {
+      const selectedTrs = memberTable.querySelectorAll('[class=selected]');
       if (selectedTrs.length == 0) {
-        alert("삭제할 데이터가 없습니다.");
+        alert('삭제할 데이터가 없습니다.');
         return;
       }
 
-      selectedTrs.forEach((el) => {
-        const docId = el.lastElementChild.value;
-        deleteDatas("member", docId).then(function () {
-          window.location.reload();
-        });
-      });
+      selectedTrs
+        .forEach((el) => {
+          const docId = el.lastElementChild.value;
+          deleteDatas('member', docId).then(function () {
+            // window.location.reload();
+          });
+        })
+        .then(getMembers);
     });
 
-    const updateBtn = document.querySelector("#updateBtn");
-    updateBtn.addEventListener("click", function () {
+    const updateBtn = document.querySelector('#updateBtn');
+    updateBtn.addEventListener('click', function () {
       const updateObj = {
-        memberId: "ljh0609",
-        memberTel: "01012345678",
+        memberId: 'ljh0609',
+        memberTel: '01012345678',
         memberTell: deleteField(),
       };
 
-      updateDatas("member", "member1", updateObj).then(() =>
+      updateDatas('member', 'member1', updateObj).then(() =>
         window.location.reload()
       );
     });
 
-    const btn = document.querySelector("#saveBtn");
-    btn.addEventListener("click", function () {
+    const btn = document.querySelector('#saveBtn');
+    btn.addEventListener('click', function () {
+      //   const formArr = [...document.forms[0].elements];
+      //   const formDataObj = formArr.reduce((acc, cur) => ({
+      //     ...acc,
+      //     [cur.name]: cur.value,
+      //   }));
+      //   console.log(formDataObj);
       const memberInfo = {
-        memberName: document.querySelector("input[name=name]").value,
-        memberAge: document.querySelector("input[name=age]").value,
-        memberGender: document.querySelector("input[name=gender]").value,
-        memberTel: document.querySelector("input[name=tel]").value,
-        memberId: document.querySelector("input[name=id]").value,
+        memberName: document.querySelector('input[name=name]').value,
+        memberAge: document.querySelector('input[name=age]').value,
+        memberGender: document.querySelector('input[name=gender]').value,
+        memberTel: document.querySelector('input[name=tel]').value,
+        memberId: document.querySelector('input[name=id]').value,
       };
-      addDatas("member", memberInfo).then(() => window.location.reload());
+      addDatas('member', memberInfo).then(() => window.location.reload());
     });
   </script>
 </html>

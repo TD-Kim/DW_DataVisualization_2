@@ -1,12 +1,13 @@
-import { useState } from "react";
-import FileInput from "./FileInput";
-import RatingInput from "./RatingInput";
-import useTranslate from "../hooks/useTranslate";
+import { useState } from 'react';
+import FileInput from './FileInput';
+import RatingInput from './RatingInput';
+import useTranslate from '../hooks/useTranslate';
+import "./ReviewForm.css";
 
 const INITIAL_VALUES = {
-  title: "",
+  title: '',
   rating: 0,
-  content: "",
+  content: '',
   imgUrl: null,
 };
 
@@ -44,7 +45,7 @@ function ReviewForm({
     try {
       setSubmittingError(null);
       setIsSubmitting(true);
-      const { review } = await onSubmit("movie", formData);
+      const { review } = await onSubmit('movie', formData);
       onSubmitSuccess(review);
     } catch (error) {
       setSubmittingError(error);
@@ -56,37 +57,41 @@ function ReviewForm({
   };
 
   return (
-    <form className="ReviewForm" onSubmit={handleSubmit}>
-      <FileInput
-        name="imgUrl"
-        value={values.imgUrl}
-        initialPreview={initialPreview}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="title"
-        value={values.title}
-        onChange={handleInputChange}
-        placeholder={t("title placeholder")}
-      />
-      <RatingInput
-        type="number"
-        name="rating"
-        value={values.rating}
-        onChange={handleChange}
-      />
-      <textarea
-        name="content"
-        value={values.content}
-        onChange={handleInputChange}
-        placeholder={t("content placeholder")}
-      />
-      {onCancel && <button onClick={onCancel}>{t("cancel button")}</button>}
-      <button type="submit" disabled={isSubmitting}>
-        {t("confirm button")}
-      </button>
-      {submittingError?.message && <div>{submittingError.message}</div>}
+    <form className='ReviewForm' onSubmit={handleSubmit}>
+      <div>
+        <FileInput
+          name='imgUrl'
+          value={values.imgUrl}
+          initialPreview={initialPreview}
+          onChange={handleChange}
+        />
+      </div>
+      <div className='Form-container'>
+        <input
+          type='text'
+          name='title'
+          value={values.title}
+          onChange={handleInputChange}
+          placeholder={t('title placeholder')}
+        />
+        <RatingInput
+          type='number'
+          name='rating'
+          value={values.rating}
+          onChange={handleChange}
+        />
+        <textarea
+          name='content'
+          value={values.content}
+          onChange={handleInputChange}
+          placeholder={t('content placeholder')}
+        />
+        {onCancel && <button onClick={onCancel}>{t('cancel button')}</button>}
+        <button type='submit' disabled={isSubmitting}>
+          {t('confirm button')}
+        </button>
+        {submittingError?.message && <div>{submittingError.message}</div>}
+      </div>
     </form>
   );
 }

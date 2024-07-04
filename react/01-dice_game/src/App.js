@@ -36,9 +36,12 @@ function random(n) {
 
 function App() {
   // State
-  // 던지기 버튼을 누르면 화면에서 주사위 이미지가 바뀌어야한다. ==> HTML 로 작성한다면 주사위 이미지 마다 화면을 만들거나
+  // 던지기 버튼을 누르면 화면에서 주사위 이미지가 바뀌어야한다. 
+  // ==> HTML 로 작성한다면 주사위 이미지 마다 화면을 만들거나
   // 비동기로 요소를 추가, 삭제 하는 코드를 작성해야한다.
-  // 리액트에서는 State 라는 것을 사용한다. State는 리액트에서 변수 같은 것인데 이 State가 바뀔 때마다 리액트가 알아서 화면을 새로 렌더링 해준다.
+  // 리액트에서는 State 라는 것을 사용한다. 
+  // State는 리액트에서 변수 같은 것인데 이 State가 바뀔 때마다 리액트가 알아서 
+  // 화면을 새로 렌더링 해준다.
   const [myNum, setMyNum] = useState(1);
   const [otherNum, setOtherNum] = useState(1);
   const [gameHistory, setGameHistory] = useState([]);

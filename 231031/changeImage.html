@@ -8,11 +8,12 @@
   <style></style>
   <body>
     <img id="image" src="시바.png" width="500" height="auto" />
-    <script>
-      function changeImage() {
-        document.getElementById("image").src = "검정시바.jpg";
-      }
-    </script>
     <input type="button" onclick="changeImage()" value="눌러보세요" />
   </body>
+  <script>
+    // function changeImage() {
+    const changeImage = function () {
+      document.getElementById('image').src = '검정시바.jpg';
+    };
+  </script>
 </html>
