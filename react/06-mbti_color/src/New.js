@@ -8,7 +8,7 @@ import Button from "./components/Button";
 
 function New() {
   const [formValue, setFormValue] = useState({
-    mbti: "INTJ",
+    mbti: "",
     colorCode: "#4f4f4f",
   });
 

@@ -14,7 +14,7 @@ const StyledButton = styled.button`
 
   &:hover,
   &:active {
-    background-color: #463770;
+    /* background-color: #463770; */
 
     ${Icon} {
       opacity: 0.2;
