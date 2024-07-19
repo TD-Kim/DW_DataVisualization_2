@@ -26,11 +26,16 @@
 }
 
 .courseItem .description {
+  /* 이 속성은 요소를 플렉스 컨테이너로 설정한다.
+    -webkit-box는 웹킷 엔진을 위한 구형 플렉스 박스 모델을 사용하도록 지정합니다. */
   display: -webkit-box;
   margin: 0 0 10px;
   overflow: hidden;
   font-size: 12px;
   font-weight: 300;
+  /* 플렉스 컨테이너의 방향을 수직으로 설정한다. */
   -webkit-box-orient: vertical;
+  /* display 속성을 -webkit-box 또는 -webkit-inline-box로, 
+     그리고 -webkit-box-orient 속성을 vertical로 설정한 경우에만 동작 */
   -webkit-line-clamp: 2;
 }

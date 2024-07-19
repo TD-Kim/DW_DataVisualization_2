@@ -23,6 +23,11 @@ function Nav() {
         </Link>
         <ul className={styles.menu}>
           <li>
+            {/* 
+              웹사이트에서 메뉴를 클릭하면 강조되는 효과가 있다. 
+              NavLink 를 사용하여 구현하자.
+              NavLink 는 style 이라는 prop 으로 함수를 내려줄 수 있다. 
+            */}
             <NavLink to="/courses" style={getLinkStyle}>
               카탈로그
             </NavLink>
@@ -32,11 +37,11 @@ function Nav() {
               커뮤니티
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink style={getLinkStyle} onClick={onClick}>
               구글로이동~
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <UserMenu />
           </li>

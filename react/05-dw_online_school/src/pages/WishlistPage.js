@@ -22,7 +22,7 @@ function WishlistPage() {
   };
 
   const handleLoad = async () => {
-    const result = await getData("member", "id", "==", member.id);
+    const result = await getData("member", "email", "==", member.email);
     setCourses(result.courseList);
   };
 
